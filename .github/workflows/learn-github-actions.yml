@@ -33,6 +33,7 @@ jobs:
           context: .
           file: ./Dockerfile
           build-args: FUSIONAUTH_VERSION=${{ env.FUSIONAUTH_VERSION }}
+          args: FUSIONAUTH_VERSION=${{ env.FUSIONAUTH_VERSION }}
           platforms: linux/amd64
           push: false
           tags: |
