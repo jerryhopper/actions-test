@@ -19,6 +19,7 @@ FROM ubuntu:bionic as build
 
 ARG JDK_MODULES=java.base,java.compiler,java.desktop,java.instrument,java.management,java.naming,java.rmi,java.security.jgss,java.security.sasl,java.sql,java.xml.crypto,jdk.attach,jdk.crypto.ec,jdk.jdi,jdk.localedata,jdk.scripting.nashorn,jdk.unsupported
 #ARG FUSIONAUTH_VERSION=1.20.0
+ENV FUSIONAUTH_VERSION=$FUSIONAUTH_VERSION
 
 RUN echo ${FUSIONAUTH_VERSION}
 RUN ARCH="$(dpkg --print-architecture)"; \
