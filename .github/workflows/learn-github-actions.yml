@@ -6,6 +6,9 @@ jobs:
     env:
         FUSIONAUTH_VERSION: 1.20.0
     steps:
+      - 
+        name: identify
+        run: echo ${{ env.FUSIONAUTH_VERSION }}
       -
         name: Checkout
         uses: actions/checkout@v2
@@ -29,9 +32,9 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          build-args: FUSIONAUTH_VERSION=${{ FUSIONAUTH_VERSION }}
+          build-args: FUSIONAUTH_VERSION=${{ env.FUSIONAUTH_VERSION }}
           platforms: linux/amd64
           push: false
           tags: |
             jerryhopper/demo-multiarch:latest
-            jerryhopper/demo-multiarch:${{ FUSIONAUTH_VERSION }}
+            jerryhopper/demo-multiarch:${{ env.FUSIONAUTH_VERSION }}
