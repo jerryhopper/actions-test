@@ -27,6 +27,8 @@ jobs:
         env:
           FUSIONAUTH_VERSION: 1.20.0
         with:
+          env:
+            FUSIONAUTH_VERSION: 1.20.0
           context: .
           file: ./Dockerfile
           build-args: FUSIONAUTH_VERSION=${{ env.FUSIONAUTH_VERSION }}
