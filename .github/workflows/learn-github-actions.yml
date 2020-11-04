@@ -25,7 +25,7 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/arm/v7,linux/arm64,linux/amd64
           push: true
           tags: |
             jerryhopper/demo-multiarch:latest
