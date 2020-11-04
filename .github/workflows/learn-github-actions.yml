@@ -32,7 +32,7 @@ jobs:
           file: ./Dockerfile
           build-args: FUSIONAUTH_VERSION=${{ env.FUSIONAUTH_VERSION }}
           platforms: linux/amd64
-          push: false
+          push: true
           tags: |
             jerryhopper/demo-multiarch:latest
             jerryhopper/demo-multiarch:${{ env.FUSIONAUTH_VERSION }}
