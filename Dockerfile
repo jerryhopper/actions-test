@@ -58,8 +58,8 @@ RUN ARCH="$(dpkg --print-architecture)"; \
     && /tmp/openjdk/bin/jlink --compress=2 \
        --module-path /tmp/openjdk/jmods/ \
        --add-modules ${JDK_MODULES} \
-       --output /opt/openjdk \
-     && curl -LfsSo /tmp/fusionauth-app.zip https://files.fusionauth.io/products/fusionauth/${FUSIONAUTH_VERSION}/fusionauth-app-${FUSIONAUTH_VERSION}.zip \
+       --output /opt/openjdk 
+RUN curl -LfsSo /tmp/fusionauth-app.zip https://files.fusionauth.io/products/fusionauth/${FUSIONAUTH_VERSION}/fusionauth-app-${FUSIONAUTH_VERSION}.zip \
      && mkdir -p /usr/local/fusionauth/fusionauth-app \
      && unzip -nq /tmp/fusionauth-app.zip -d /usr/local/fusionauth
 
