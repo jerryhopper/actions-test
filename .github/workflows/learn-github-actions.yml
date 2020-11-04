@@ -25,9 +25,9 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          args: --build-arg TAG=slim 
-          platforms: linux/arm/v7,linux/arm64,linux/amd64
-          push: true
+          args: --build-arg FUSIONAUTH_VERSION=1.23.0
+          platforms: linux/amd64
+          push: false
           tags: |
             jerryhopper/demo-multiarch:latest
-            jerryhopper/demo-multiarch:1.20.0
+            jerryhopper/demo-multiarch:1.23.0
